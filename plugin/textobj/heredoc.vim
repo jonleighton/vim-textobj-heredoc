@@ -1,3 +1,7 @@
+if exists('g:loaded_textobj_heredoc')
+  finish
+endif
+
 call textobj#user#plugin('heredoc', {
 \   '-': {
 \     'select-a-function': 'textobj#heredoc#select_a',
@@ -6,3 +10,5 @@ call textobj#user#plugin('heredoc', {
 \     'select-i': 'ih',
 \   },
 \ })
+
+let g:loaded_textobj_comment = 1
